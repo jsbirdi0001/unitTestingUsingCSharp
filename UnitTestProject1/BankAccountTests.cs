@@ -28,7 +28,7 @@ namespace BankTests
 
         /// <summary>
         /// Using The test Method to Check whether credit method is working fine
-        /// </summary>
+        /// </summary> 
         [TestMethod]
         public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
         {
