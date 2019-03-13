@@ -51,7 +51,19 @@ namespace BankTests
         /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
-        publi
+        public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
+        {
+            // Arrange
+            double beginningBalance = 11.99;
+            double creditAmount = 50.00;
+            BankAccount account = new BankAccount("Mr Jatinder", beginningBalance);
+
+            // Act
+            account.Debit(creditAmount);
+
+            // Assert
+            
+        }
 
     }
 }
