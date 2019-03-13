@@ -64,6 +64,18 @@ namespace BankTests
             // Assert
             
         }
+        [TestMethod]
+        public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
+        {
+            // Arrange
+            double beginningBalance = 11.99;
+            double creditAmount = 50.00;
+            BankAccount account = new BankAccount("Mr Jatinder", beginningBalance);
 
+            // Act
+            account.Debit(creditAmount);
+
+            // Assert
+        }
     }
 }
