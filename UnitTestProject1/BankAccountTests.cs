@@ -30,7 +30,7 @@ namespace BankTests
         /// Using The test Method to Check whether credit method is working fine
         /// </summary> 
         [TestMethod]
-        public void Debit_WhenAmountIsLessThanZero_ShouldThrowArgumentOutOfRange()
+        public void Credit_WithValidAmmount_UpdatesBalance()
         {
             // Arrange
             double beginningBalance = 11.99;
@@ -50,6 +50,8 @@ namespace BankTests
         /// Creating the test method to check when amount is less than zero
         /// </summary>
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        publi
 
     }
 }
