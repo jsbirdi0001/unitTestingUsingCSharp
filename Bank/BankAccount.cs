@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BankTests;
 
 namespace BankTests
 {
@@ -10,8 +11,12 @@ namespace BankTests
     // Bank Accound demo class
     //</summary>
 
+
     public class BankAccount
     {
+        public const string DebitAmountExceedBalanceMessage = "The Debit Amount exceed the balance in account";
+        public const string DebitAmountLessThanBalanceMessage = "The Debit Amount is less than balance in account";
+
         private string m_customerName;
         private double m_balance;
         private bool m_frozen = false;
@@ -40,11 +45,11 @@ namespace BankTests
             }
             if (amount > m_balance)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountExceedBalanceMessage);
             }
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount");
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountLessThanBalanceMessage);
             }
             m_balance -= amount;
 

@@ -55,11 +55,11 @@ namespace BankTests
         {
             // Arrange
             double beginningBalance = 11.99;
-            double creditAmount = 50.00;
+            double debitAmount = -50.00;
             BankAccount account = new BankAccount("Mr Jatinder", beginningBalance);
 
             // Act
-            account.Debit(creditAmount);
+            account.Debit(debitAmount);
 
             // Assert
             
@@ -69,13 +69,16 @@ namespace BankTests
         {
             // Arrange
             double beginningBalance = 11.99;
-            double creditAmount = 50.00;
+            double debitAmount = 50.00;
             BankAccount account = new BankAccount("Mr Jatinder", beginningBalance);
 
             // Act
-            account.Debit(creditAmount);
+            account.Debit(debitAmount);
 
             // Assert
         }
+        
+        
+
     }
 }
