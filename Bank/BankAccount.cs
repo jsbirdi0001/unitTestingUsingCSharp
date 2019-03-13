@@ -22,7 +22,7 @@ namespace BankTests
         public BankAccount(string customerName, double balance)
         {
             m_customerName = customerName;
-            m_balance = balance;
+            m_balance = balance; 
         }
         public string CustomerName
         {
