@@ -45,5 +45,11 @@ namespace BankTests
             double actual = account.Balance;
             Assert.AreEqual(expected, actual, 0.001, "Account not credited correctly");
         }
+        
+        /// <summary>
+        /// Creating the test method to check when amount is less than zero
+        /// </summary>
+        [TestMethod]
+
     }
 }
